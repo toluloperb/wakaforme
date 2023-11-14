@@ -1,0 +1,438 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    font-family: 'Montserrat';
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .nav {
+    height: 50px;
+    width: 100%;
+    background-color: #ff0066;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 100px;
+    width: 60%;
+  }
+
+  .nav > .nav-header > .nav-title img {
+    width: 30%;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 14px;
+    margin-right: 100px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(29, 29, 29, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+@media (max-width:600px) {
+    .nav > .nav-header > .nav-title {
+        padding: 10px 10px 10px 10px;
+        margin-left: 30px;
+    }
+
+    .nav > .nav-header > .nav-title img {
+        width: 85%;
+    }
+
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    .nav > .nav-btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+        margin-right: 30px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav > .nav-links > a {
+        display: block;
+        width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+.board1 {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+}
+
+.bigBanner {
+  width: 35%;
+  margin-left: 8%;
+  height: 600px;
+  /* background-color: #ff0066; */
+  background-image: url(images/bkg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 2%;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.sec1 {
+  align-items: center;
+  text-align: center;
+}
+
+.sec1 h2 {
+  color: #fff;
+  margin-top: 15%;
+  width: 60%;
+  margin-bottom: 4.8%;
+  margin-left: 20%;
+}
+
+.bigBanner img {
+  height: 70%;
+}
+
+@media (max-width:600px) {
+  .board1 {
+    flex-direction: column;
+  }
+
+  .bigBanner {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: 0;
+    height: 503px;
+  }
+
+  .sec1 h2 {
+    margin-top: 11.2%;
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+.categories {
+  height: 50px;
+}
+
+.locationform select, input {
+  width: 100%;
+  height: 30px;
+  background-color: #333;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 1%;
+  padding-left: 12px;
+}
+
+.buttons {
+  width: 100%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  text-align: center;
+  align-items: center;
+}
+
+.buttons button {
+  width: 250px;
+  height: 30px;
+  border: 0;
+}
+
+.form-table {
+  width: 30%;
+  margin-top: 2%;
+  margin-left: 35%;
+}
+
+.form-table select,option, textarea {
+  width: 100%;
+  height: 35px;
+  background-color: #333;
+  color: #8f8f8f;
+  padding: 8px;
+  margin-top: 1%;
+  border-radius: 5px;
+}
+
+.bodyButtons, .bodyButtons2 {
+  margin-bottom: 10%;
+  width: 85%;
+  margin-left: 7.5%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.bodyButtons button {
+  width: 360px;
+  height: 40px;
+  border: 0;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.bodyButtons2 button {
+  width: 360px;
+  height: 40px;
+  border: 0;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.bodyButtons a {
+  margin: 5px;
+}
+
+.bodyButtons button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.locations {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.locationsTable {
+  width: 45%;
+  height: auto;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.locationsTable h3, p {
+  margin-left: 2%;
+}
+
+.locationsTable p {
+  font-size: 10pt;
+}
+
+.locations a {
+  width: 140px;
+  height: auto;
+  padding: 2%;
+  background-color: #ff0066;
+  border-radius: 5px;
+  margin: 2px 2px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.locations a:hover {
+  filter: blur(2px);
+}
+
+.locations nav img {
+  width: 40%;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+@media (max-width:600px) {
+  .locationsTable {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .locationsTable h3 {
+    width: 80% !important;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+
+  .locationsTable p {
+    width: 80% !important;
+    margin-left: 10%;
+    margin-top: 2%;
+  }
+
+  .locations .productDetails {
+    width: 90% !important;
+  }
+}
+
+.locations nav h3 {
+  color: #fff;
+  font-size: 10pt;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 4%;
+}
+
+.line {
+  width: 60%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-left: 20%;
+}
+
+.changeLocale button {
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  height: 30px;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.locations a .productImgs {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.locations .productDetails {
+  width: 185px;
+  height: auto;
+  padding: 2%;
+  background-color: #333;
+  border-radius: 5px;
+  margin: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.locations .productDetails:hover {
+  filter: blur(0);
+}
+
+.locations .SingleproductDetails {
+  width: 100%;
+  background-color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4%;
+  border-radius: 10px;
+  background-image: url(images/bkg2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.locations .SingleproductDetails .productImgs {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.locations .SingleproductDetails:hover {
+  filter: none;
+}
+
+.addToCartBtn {
+  text-align: center;
+  width: 50%;
+  height: 30px;
+  background-color: #333;
+  border: none;
+  margin: 1%;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.buttonsAtSingle {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
